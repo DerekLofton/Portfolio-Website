@@ -1,0 +1,67 @@
+/* RESET / NORMALIZE */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ROOT VARIABLES */
+:root {
+    --font-primary: 'Inter', sans-serif;
+    --color-bg: #252525;
+    --color-text: #f7f4e2;
+    --color-accent: #0077ff;
+}
+
+/* GLOBAL STYLES */
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #2b2b2b;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* LAYOUT ELEMENTS */
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header {}
+nav {}
+main {}
+section {}
+footer {}
+
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 0 0.5rem;
+  }
+}
