@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio for Derek Lofton">
-    <meta name="author" content="Derek Lofton">
-    <title>Derek Lofton | Portfolio</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <link rel="icon" href="favicon_io/favicon.ico">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio for Derek Lofton">
+  <meta name="author" content="Derek Lofton">
+  <title>Derek Lofton | Portfolio</title>
+
+  <!-- Favicons / App icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="icon" href="favicon_io/favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="top">
   <header>
     <nav aria-label="Primary">
       <ul>
-        <li><a href="#top">Home</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <!-- Theme toggle -->
+      <div class="theme-toggle">
+        <input type="checkbox" id="themeSwitch" class="theme-switch" aria-label="Toggle light mode">
+        <label for="themeSwitch" class="theme-switch-label">
+          <span class="theme-icon" aria-hidden="true"></span>
+          <span class="theme-text" aria-hidden="true"></span>
+        </label>
+      </div>
     </nav>
   </header>
 
@@ -102,95 +117,78 @@
     </section>
 
     <section id="portfolio" aria-labelledby="portfolio-title">
-  <h2 id="portfolio-title">Portfolio</h2>
-  <p>
-    Below are selected projects across web design, graphic design, and aerial media.
-    Scroll through each section to explore my work.
-  </p>
-</section>
+      <h2 id="portfolio-title">Portfolio</h2>
+      <p>
+        Below are selected projects across web design, graphic design, and aerial media.
+        Scroll through each section to explore my work.
+      </p>
+    </section>
 
-<!-- WEB DESIGN SECTION -->
-<section id="web-design" aria-labelledby="web-design-title">
-  <h2 id="web-design-title">Web Design</h2>
+    <!-- WEB DESIGN SECTION -->
+    <section id="web-design" aria-labelledby="web-design-title">
+      <h2 id="web-design-title">Web Design</h2>
+      <p>
+        I design and build clean, user-focused websites with an emphasis on simplicity,
+        usability, and modern aesthetics. My work focuses on intuitive layouts,
+        responsive design, and clear visual hierarchy so visitors can easily navigate
+        and engage with content.
+      </p>
 
-  <p>
-    I design and build clean, user-focused websites with an emphasis on simplicity,
-    usability, and modern aesthetics. My work focuses on intuitive layouts,
-    responsive design, and clear visual hierarchy so visitors can easily navigate
-    and engage with content.
-  </p>
+      <div class="media-grid">
+        <article class="media-item">
+          <h3>Project Title</h3>
+          <p>Short description of the project.</p>
+        </article>
 
-  <!-- Media Grid -->
-  <div class="media-grid">
+        <article class="media-item">
+          <h3>Project Title</h3>
+          <p>Short description of the project.</p>
+        </article>
+      </div>
+    </section>
 
-    <article class="media-item">
-      <!-- <img src="images/site1.jpg" alt="Website homepage design"> -->
-      <h3>Project Title</h3>
-      <p>Short description of the project.</p>
-    </article>
+    <!-- GRAPHIC DESIGN SECTION -->
+    <section id="graphic-design" aria-labelledby="graphic-design-title">
+      <h2 id="graphic-design-title">Graphic Design</h2>
+      <p>
+        I create visual content that communicates ideas clearly and effectively.
+        My design work focuses on strong composition, attention to detail,
+        and cohesive branding.
+      </p>
 
-    <article class="media-item">
-      <!-- <img src="images/site2.jpg" alt="Website mobile layout"> -->
-      <h3>Project Title</h3>
-      <p>Short description of the project.</p>
-    </article>
+      <div class="media-grid">
+        <article class="media-item">
+          <h3>Project Title</h3>
+          <p>Short description of the design.</p>
+        </article>
 
-  </div>
-</section>
+        <article class="media-item">
+          <h3>Project Title</h3>
+          <p>Short description of the design.</p>
+        </article>
+      </div>
+    </section>
 
+    <!-- DRONE WORK SECTION -->
+    <section id="drone-work" aria-labelledby="drone-work-title">
+      <h2 id="drone-work-title">Drone Work</h2>
+      <p>
+        I use aerial photography and videography to capture perspectives that
+        ground-level work can't provide. My work includes real estate imagery
+        and enhanced aerial visuals using professional photo editing.
+      </p>
 
-<!-- GRAPHIC DESIGN SECTION -->
-<section id="graphic-design" aria-labelledby="graphic-design-title">
-  <h2 id="graphic-design-title">Graphic Design</h2>
+      <div class="media-grid">
+        <article class="media-item">
+          <img src="media/KL-Outside-05.jpg" alt="Aerial real estate photo">
+          <p>Short description of the aerial shot.</p>
+        </article>
 
-  <p>
-    I create visual content that communicates ideas clearly and effectively.
-    My design work focuses on strong composition, attention to detail,
-    and cohesive branding.
-  </p>
-
-  <div class="media-grid">
-
-    <article class="media-item">
-      <!-- <img src="images/logo1.jpg" alt="Logo design"> -->
-      <h3>Project Title</h3>
-      <p>Short description of the design.</p>
-    </article>
-
-    <article class="media-item">
-      <!-- <img src="images/edit1.jpg" alt="Photo editing example"> -->
-      <h3>Project Title</h3>
-      <p>Short description of the design.</p>
-    </article>
-
-  </div>
-</section>
-
-
-<!-- DRONE WORK SECTION -->
-<section id="drone-work" aria-labelledby="drone-work-title">
-  <h2 id="drone-work-title">Drone Work</h2>
-
-  <p>
-    I use aerial photography and videography to capture perspectives that
-    ground-level work can't provide. My work includes real estate imagery
-    and enhanced aerial visuals using professional photo editing.
-  </p>
-
-  <div class="media-grid">
-
-    <article class="media-item">
-      <img src="media/KL-Outside-05.jpg" alt="Aerial real estate photo">
-      <p>Short description of the aerial shot.</p>
-    </article>
-
-    <article class="media-item">
-      <!-- <video src="videos/drone-video.mp4" controls></video> -->
-      <p>Short description of the video.</p>
-    </article>
-
-  </div>
-</section>
+        <article class="media-item">
+          <p>Short description of the video.</p>
+        </article>
+      </div>
+    </section>
 
     <!-- CONTACT -->
     <section id="contact" aria-labelledby="contact-title">
