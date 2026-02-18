@@ -7,9 +7,7 @@
   box-sizing: border-box;
 }
 
-/* =========================
-   THEME VARIABLES
-========================= */
+/* THEME VARIABLES */
 :root {
   --font-primary: 'Inter', sans-serif;
 
@@ -30,9 +28,7 @@
   --nav-h: 64px;
 }
 
-/* =========================
-   GLOBAL
-========================= */
+/* GLOBAL */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--nav-h) + 12px);
@@ -102,9 +98,7 @@ img {
   display: block;
 }
 
-/* =========================
-   HEADER + STICKY NAV
-========================= */
+/* HEADER + STICKY NAV */
 header {
   position: sticky;
   top: 0;
@@ -162,9 +156,7 @@ header nav a:focus-visible {
   outline-offset: 3px;
 }
 
-/* =========================
-   MOBILE NAV FIX (keeps Contact on same line)
-========================= */
+/* Mobile NAV */
 @media (max-width: 600px) {
   header nav {
     height: auto;
@@ -175,16 +167,16 @@ header nav a:focus-visible {
   }
 
   header nav ul {
-    flex-wrap: nowrap;             /* prevents wrapping */
-    overflow-x: auto;              /* allows swipe if needed */
+    flex-wrap: nowrap;
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    gap: 0.15rem;                  /* closer tabs */
+    gap: 0.15rem;
     justify-content: flex-start;
     padding-bottom: 0.25rem;
   }
 
   header nav ul::-webkit-scrollbar {
-    height: 0px;                   /* hides scrollbar on mobile */
+    height: 0px;
   }
 
   header nav a {
@@ -203,9 +195,7 @@ header nav a:focus-visible {
   }
 }
 
-/* =========================
-   HOME SECTION (optional polish)
-========================= */
+/* HOME SECTION */
 #home p:first-of-type {
   color: var(--text);
   opacity: 0.95;
@@ -213,9 +203,7 @@ header nav a:focus-visible {
   margin-bottom: 0.75rem;
 }
 
-/* =========================
-   SKILLS GRID
-========================= */
+/* SKILLS GRID */
 #skills > section {
   padding: 1.25rem;
   background: var(--surface);
@@ -251,9 +239,7 @@ header nav a:focus-visible {
   }
 }
 
-/* =========================
-   PORTFOLIO MEDIA GRID
-========================= */
+/* PORTFOLIO MEDIA GRID */
 .media-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -280,9 +266,6 @@ header nav a:focus-visible {
   }
 }
 
-/* =========================
-   CONTACT LIST CLEANUP
-========================= */
 #contact ul {
   list-style: none;
   padding: 0;
@@ -293,9 +276,7 @@ header nav a:focus-visible {
   padding: 0.35rem 0;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER*/
 footer {
   border-top: 1px solid var(--border);
   padding: 2rem 1rem;
@@ -303,9 +284,7 @@ footer {
   color: var(--muted);
 }
 
-/* =========================
-   THEME TOGGLE (Pure CSS)
-========================= */
+/* THEME TOGGLE */
 .theme-toggle {
   display: flex;
   align-items: center;
@@ -351,7 +330,7 @@ footer {
   outline-offset: 3px;
 }
 
-/* Light mode when checked (uses :has) */
+/* Light mode when checked */
 body:has(#themeSwitch:checked) {
   --bg: #f6f7fb;
   --surface: #ffffff;
@@ -367,7 +346,6 @@ body:has(#themeSwitch:checked) header {
   background: rgba(255, 255, 255, 0.75);
 }
 
-/* Icon + text via pseudo elements (prevents DarkDark) */
 .theme-icon::before {
   content: "🌙";
   font-size: 1rem;
