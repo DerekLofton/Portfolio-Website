@@ -24,8 +24,20 @@
 </head>
 
 <body id="top">
-  <header>
-    <nav aria-label="Primary">
+
+  <!-- Header ONLY contains the video banner -->
+  <header class="site-header">
+    <div class="video-banner" aria-hidden="true">
+      <video class="banner-video" autoplay muted loop playsinline preload="auto">
+        <source src="media/Header.mp4" type="video/mp4">
+      </video>
+      <div class="banner-overlay"></div>
+    </div>
+  </header>
+
+  <!-- Nav is OUTSIDE header so sticky works the whole page -->
+  <nav class="sticky-nav" aria-label="Primary">
+    <div class="nav-inner">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -42,8 +54,8 @@
           <span class="theme-text" aria-hidden="true"></span>
         </label>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <main id="main">
     <section id="home" aria-labelledby="home-title">
@@ -137,10 +149,11 @@
       <div class="media-grid">
         <article class="media-item">
           <h3>Robert A. Wiest, Attorney at Law</h3>
-          <a href="https://northerncoattorney.com/" target="_blank" rel="noopener"><img src="media/RWAttorneyWebsite.png" alt="alt description"></article></div></a>
+          <a href="https://northerncoattorney.com/" target="_blank" rel="noopener">
+            <img src="media/RWAttorneyWebsite.png" alt="alt description">
+          </a>
           <p>Short description of the project.</p>
         </article>
-
       </div>
     </section>
 
@@ -174,11 +187,10 @@
           <img src="media/3.PNG" alt="alt description">
           <p>Short description of the video.</p>
           <video class="portfolio-video" autoplay muted loop playsinline preload="metadata">
-            <source src="media/2023-05-06 19-57-08.mp4" type="video/mp4">
+            <source src="media/Capstone_Results.mp4" type="video/mp4">
           </video>
           <p>Short description of the video.</p>
         </article>
-
       </div>
     </section>
 
@@ -192,18 +204,16 @@
       </p>
 
       <div class="media-grid">
-
         <article class="media-item">
           <p>Short description of the design.</p>
+          <img src="media/C8F7E461-.jpg" alt="alt description">
           <img src="media/Bikes1.png" alt="alt description">
           <img src="media/739146087.jpg" alt="alt description">
-          <img src="media/C8F7E461-.jpg" alt="alt description">
         </article>
 
         <article class="media-item">
           <p>Short description of the design.</p>
           <img src="media/CHD.png" alt="alt description">
-          <img src="media/Screenshot 2026-02-17 181150.png" alt="alt description">
           <img src="media/Screenshot 2026-02-17 181533.png" alt="alt description">
         </article>
 
@@ -232,8 +242,6 @@
         <li>Phone: <a href="tel:+19706901870">(970) 690-1870</a></li>
         <li>LinkedIn: <a href="https://linkedin.com/in/dereklofton" target="_blank" rel="noopener">linkedin.com/in/dereklofton</a></li>
       </ul>
-
-      <p><a href="#top">Back to top</a></p>
     </section>
   </main>
 

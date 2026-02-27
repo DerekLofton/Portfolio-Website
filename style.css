@@ -98,18 +98,50 @@ img {
   display: block;
 }
 
-/* HEADER + STICKY NAV */
-header {
+/* HEADER (video only) */
+.site-header {
+  position: relative;
+  z-index: 1;
+}
+
+/* VIDEO BANNER */
+.video-banner {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  background: #000;
+}
+
+.banner-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* STICKY NAV (now independent so it stays visible everywhere) */
+.sticky-nav {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 4000;
+  width: 100%;
   background: rgba(43, 43, 43, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
 
-/* Header inner layout */
-header nav {
+/* Nav inner layout (this keeps your max width and spacing) */
+.sticky-nav .nav-inner {
   max-width: var(--maxw);
   margin: 0 auto;
   height: var(--nav-h);
@@ -120,7 +152,7 @@ header nav {
 }
 
 /* NAV LIST */
-header nav ul {
+.sticky-nav ul {
   list-style: none;
   display: flex;
   gap: 0.25rem;
@@ -130,7 +162,7 @@ header nav ul {
   flex-wrap: wrap;
 }
 
-header nav a {
+.sticky-nav a {
   display: inline-flex;
   align-items: center;
   height: 42px;
@@ -144,21 +176,26 @@ header nav a {
   transition: transform 120ms ease, background 120ms ease, opacity 120ms ease;
 }
 
-header nav a:hover {
+.sticky-nav a:hover {
   background: rgba(255, 255, 255, 0.06);
   opacity: 1;
   text-decoration: none;
   transform: translateY(-1px);
 }
 
-header nav a:focus-visible {
+.sticky-nav a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
-/* Mobile NAV */
+/* Mobile NAV + HIDE HEADER VIDEO ON MOBILE */
 @media (max-width: 600px) {
-  header nav {
+  /* Hide header video banner on mobile */
+  .video-banner {
+    display: none;
+  }
+
+  .sticky-nav .nav-inner {
     height: auto;
     padding: 0.75rem 1rem;
     gap: 0.6rem;
@@ -166,7 +203,7 @@ header nav a:focus-visible {
     align-items: stretch;
   }
 
-  header nav ul {
+  .sticky-nav ul {
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -175,11 +212,11 @@ header nav a:focus-visible {
     padding-bottom: 0.25rem;
   }
 
-  header nav ul::-webkit-scrollbar {
+  .sticky-nav ul::-webkit-scrollbar {
     height: 0px;
   }
 
-  header nav a {
+  .sticky-nav a {
     height: 36px;
     padding: 0 0.55rem;
     font-size: 0.9rem;
@@ -342,7 +379,7 @@ body:has(#themeSwitch:checked) {
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
 }
 
-body:has(#themeSwitch:checked) header {
+body:has(#themeSwitch:checked) .sticky-nav {
   background: rgba(255, 255, 255, 0.75);
 }
 
